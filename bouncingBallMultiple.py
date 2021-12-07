@@ -8,7 +8,6 @@ GRAVITY = 0.3
 NUMBER_OF_BALLS = 4
 DELAY = 0.1
 
-
 def getpositionfromxy(x, y):
     position = ((y-1) * X_DIMENSION) + x
     return position
@@ -43,10 +42,6 @@ def updateball(ballInput):
     # Note we subtract from the ball's y-velocity since gravity is pulling down, not up
     ballInput['yvelocity'] -= GRAVITY
 
-
-
-    # If ball has gone out of bounds as a result of the position adjustment, bring it back
-
     return ballInput
 
 def initialiseBall():
@@ -58,13 +53,9 @@ def initialiseBall():
     }
     return ball
 
-
 def drawBall(position):
     # do something here
     return True
-
-
-
 
 ### END OF FUNCTIONS
 
@@ -73,7 +64,9 @@ ballArray = []
 for i in range(NUMBER_OF_BALLS):
     ballArray.append(initialiseBall())
 
-#Main logic loop - draw ball, wait a while, update balls position, repeat...
+# Main logic loop - Clear didplay, then repeat this for each ball...
+# - draw ball, wait a while, update balls position, repeat... -
+# Then finish up with a delay before repeating whole process again
 while True:
     #Clear the LED display here, not inside the following loop...
 
@@ -84,7 +77,6 @@ while True:
         # Following line for debugging, can be removed...
         print(i, ball)
         ballArray[i] = updateball(ballArray[i])
-
     time.sleep(DELAY)
 
 
