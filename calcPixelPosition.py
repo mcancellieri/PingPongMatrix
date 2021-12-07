@@ -25,6 +25,7 @@ def flipposition(unflipped):
         maxValueInRow = X_DIMENSION * (row + 1)
         return maxValueInRow - column
 
+# Some tests
 x = 33
 y = 0
 print('Get position from x y: ',(x,y))
