@@ -21,6 +21,7 @@ def flipposition(unflipped):
         # even row, no need to do anything
         return unflipped
     else:
+        # odd row.  numbers run down from high to low in this row, so subtract the x position from the max value.
         maxValueInRow = X_DIMENSION * (row + 1)
         return maxValueInRow - column
 
