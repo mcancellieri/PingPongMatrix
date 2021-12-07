@@ -22,7 +22,7 @@ def flipposition(unflipped):
         return unflipped
     else:
         maxValueInRow = X_DIMENSION * (row + 1)
-        return (maxValueInRow - column)
+        return maxValueInRow - column
 
 x = 33
 y = 0
