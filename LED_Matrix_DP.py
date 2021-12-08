@@ -268,7 +268,7 @@ def updateball(ballInput):
 def drawBall(position):
     #print (position)
     #print (type(position))
-    pos = int(position)
+    pos = myMatrix.index(int(position))
     strip.setPixelColor(pos,colour(0,255,0))
     strip.show()
     time.sleep(0.05)
@@ -299,19 +299,24 @@ ball = {
 ##    LEDposition = getpositionfromxy(round(ball['xpos']),round(ball['ypos']))
 ##    drawBall(LEDposition)
 ##    ball = updateball(ball)
+i=0
+while True:
+   drawBall(i%496)
+   i+=1
 
 
 
 
-scroll()
-animate()
-rainbow(strip)
-theaterChase(strip, Color(127,   127,   127))  # White theater chase
-theaterChase(strip, Color(127,   0,   0))  # Red theater chase
-theaterChase(strip, Color(  0,   0, 127))  # Blue theater chase
-show_image('nz_flag_8b.png')
-fade()
-allonecolour(strip,colour(0,0,0))
+
+#scroll()
+#animate()
+#rainbow(strip)
+#theaterChase(strip, Color(127,   127,   127))  # White theater chase
+#theaterChase(strip, Color(127,   0,   0))  # Red theater chase
+#theaterChase(strip, Color(  0,   0, 127))  # Blue theater chase
+#show_image('nz_flag_8b.png')
+#fade()
+#allonecolour(strip,colour(0,0,0))
 ##print ('Done')
 
 
